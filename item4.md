@@ -2,7 +2,7 @@
 
 ### 선언만 하고 초기화를 하지 않는다면...
 
-```
+```cpp
 class Point {
     int x, y;
 };
@@ -15,14 +15,14 @@ Point p;    // X된다.
 ```
 
 - 변수들은 항상 초기화를 해서 사용.
-```
+```cpp
 int x = 0;
 const char * text = "ABC";
 ```
 - 그 외 경우는 다 생성자에서 해결한다.
 - 생성자에서는 그 객체의 모든 것을 초기화한다.
 
-```
+```cpp
 class ABEntry{
 private:
     std::string theName;
