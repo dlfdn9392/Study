@@ -8,11 +8,12 @@
 <br/>
 
 ### const 문법
-```
+```cpp
 void f1(const Widget *pw)
+
 void f1(Widget const *pw)
 ```
-```
+```cpp
       char *       p = greeting;
 const char *       p = greeting; // 상수 데이터
       char * const p = greeting; // 상수 포인터
@@ -27,7 +28,7 @@ const char * const p = greeting;
 ### const와 함수의 결합
 - 안전성, 효율성 극대화
 - 기본 제공 타입과의 호환성을 제공해야 한다 
-```
+```cpp
 const Rational operatior* (const Rational& lhs, const Rational& rhs);
 
 (a * b) = c // ??????
@@ -49,7 +50,7 @@ const Rational operatior* (const Rational& lhs, const Rational& rhs);
 <br/>
 
 ### const의 유무로 오버로딩이 가능하다 !
-```
+```cpp
 class TextBlock{
     public:
         ...
@@ -68,7 +69,7 @@ ctb[0] = 'x';       // Error!! 호출은 된다.
 ```
 
 - 논리적 상수성의 위배
-```
+```cpp
 class CTextBlock{
     public:
         ...
@@ -84,12 +85,12 @@ char *pc = &cctb[0];
 *pc = 'J';      // X됐다.
 ```
 - mutable로 선언한 멤버는 const 멤버 함수 내에서도 수정 가능.
-```
+```cpp
 mutable std::size_t textlength;
 ```
 
 ### const만으로 구분은 했는데 코드의 중복이...
-```
+```cpp
 class TextBlock{
     public:
         ...
