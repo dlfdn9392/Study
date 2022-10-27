@@ -1,6 +1,6 @@
 ## 9. 객체 생성 및 소멸 과정 중에는 절대로 가상 함수를 호출하지 말자
 
-```
+```cpp
 class Smoother
 {
 public:
@@ -26,7 +26,7 @@ public:
 - 위에서 아래로 내려가지 않는다
 
 
-```
+```cpp
 class Smoother
 {
 public:
@@ -56,12 +56,12 @@ private:
 
 
 ## 10. 대입 연산자는 *this의 참조자를 반환하게 하자
-```
+```cpp
 x = y = z = 15;
 x = (y = (z = 15));
 ```
 - 사슬처럼 되는것은 좌변 인자에 대한 참조자를 반환하기 때문
-```
+```cpp
 class Widget{
 public:
     Wieget& operator= (const Widget& rhs){
